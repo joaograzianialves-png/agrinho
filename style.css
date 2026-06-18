@@ -1,60 +1,104 @@
-/* style.css */
-
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Configurações Gerais */
+:root {
+    --bg-color: #f4f7f6;
+    --text-color: #2c3e50;
+    --card-bg: #ffffff;
+    --primary-color: #27ae60;
+    --accent-color: #2980b9;
+    --highlight-color: transparent;
+    --base-font-size: 16px;
 }
 
-/* Estilo do corpo */
+/* Modo Escuro / Alto Contraste (Brilho) */
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --card-bg: #1e1e1e;
+    --primary-color: #2ecc71;
+    --accent-color: #3498db;
+}
+
+/* Modo de Destaque Ativado */
+body.highlight-mode .important-text {
+    background-color: #f1c40f;
+    color: #000000;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-  line-height: 1.6;
-  text-align: center;
-  transition: background-color 0.4s ease;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: var(--base-font-size);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Cabeçalho */
+/* Barra de Acessibilidade Fixa */
+.accessibility-bar {
+    background-color: #2c3e50;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    z-index: 1000;
+}
+
+.accessibility-bar button {
+    background-color: #ffffff;
+    color: #2c3e50;
+    border: none;
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: transform 0.1s;
+}
+
+.accessibility-bar button:hover {
+    transform: scale(1.05);
+    background-color: #ecf0f1;
+}
+
+/* Conteúdo */
 header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--primary-color);
+    color: white;
 }
 
-/* Conteúdo principal */
-main {
-  padding: 40px;
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
 }
 
-/* Parágrafo */
-p {
-  font-size: 18px;
-  margin-bottom: 20px;
+.card {
+    background-color: var(--card-bg);
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-/* Botão */
-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  font-size: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
+.pilar {
+    margin-top: 15px;
+    padding-left: 15px;
+    border-left: 4px solid var(--accent-color);
 }
 
-button:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
-}
-
-/* Mensagem */
-#mensagem {
-  margin-top: 20px;
-  font-weight: bold;
-  font-size: 20px;
+blockquote {
+    background-color: var(--card-bg);
+    border-left: 5px solid var(--primary-color);
+    margin: 20px 0;
+    padding: 15px;
+    font-style: italic;
 }
