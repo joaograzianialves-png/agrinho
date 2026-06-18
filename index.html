@@ -1,60 +1,57 @@
-/* style.css */
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte, Futuro Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    <nav class="accessibility-bar" aria-label="Ferramentas de Acessibilidade">
+        <button onclick="changeFontSize('increase')" aria-label="Aumentar texto">A+ Aumentar Texto</button>
+        <button onclick="changeFontSize('decrease')" aria-label="Diminuir texto">A- Diminuir Texto</button>
+        <button onclick="toggleContrast()" aria-label="Alternar Contraste/Brilho">◐ Alternar Brilho</button>
+        <button onclick="toggleHighlights()" aria-label="Destacar informações importantes">⭐ Destacar Principais</button>
+    </nav>
 
-/* Estilo do corpo */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-  line-height: 1.6;
-  text-align: center;
-  transition: background-color 0.4s ease;
-}
+    <header>
+        <h1>Agro Forte: O Futuro Sustentável</h1>
+        <p>O equilíbrio vital entre a alta produção e a preservação do meio verde e da água.</p>
+    </header>
 
-/* Cabeçalho */
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-}
+    <main class="container">
+        
+        <section class="card">
+            <h2>O Grande Desafio do Século XXI</h2>
+            <p>O conceito de <span class="important-text">agro forte e sustentável</span> baseia-se em produzir alimentos de forma eficiente sem esgotar os recursos naturais do planeta. Não se trata de escolher entre a economia ou a natureza, mas sim de uni-las através da tecnologia.</p>
+        </section>
 
-/* Conteúdo principal */
-main {
-  padding: 40px;
-}
+        <section class="card">
+            <h2>Os Pilares do Equilíbrio</h2>
+            
+            <div class="pilar">
+                <h3>1. Preservação da Água</h3>
+                <p>Uso de <span class="important-text">irrigação gota a gota</span>, sensores de umidade no solo e proteção ativa de nascentes para evitar o desperdício do recurso mais precioso do planeta.</p>
+            </div>
 
-/* Parágrafo */
-p {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
+            <div class="pilar">
+                <h3>2. Tecnologia de Precisão</h3>
+                <p>Drones e inteligência artificial mapeiam lavouras para aplicar fertilizantes e defensivos <span class="important-text">apenas onde é necessário</span>, reduzindo drasticamente o impacto ambiental.</p>
+            </div>
 
-/* Botão */
-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  font-size: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-}
+            <div class="pilar">
+                <h3>3. Conservação do Solo (Meio Verde)</h3>
+                <p>Práticas como o plantio direto e a rotação de culturas evitam a erosão, mantêm os nutrientes da terra vivos e eliminam a necessidade de desmatar novas áreas.</p>
+            </div>
+        </section>
 
-button:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
-}
+        <blockquote>
+            "O objetivo principal do agro moderno é produzir mais no mesmo espaço, garantindo a segurança alimentar e protegendo a biodiversidade."
+        </blockquote>
 
-/* Mensagem */
-#mensagem {
-  margin-top: 20px;
-  font-weight: bold;
-  font-size: 20px;
-}
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
